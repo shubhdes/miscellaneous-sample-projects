@@ -11,7 +11,7 @@ import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 
-public class SampleConsumerApplication {
+public class SampleConsumerApplication0 {
 
 	private static final String TOPIC_NAME = "my-topic-002";
 
@@ -23,7 +23,7 @@ public class SampleConsumerApplication {
 
 	private KafkaConsumer<String, String> consumer;
 
-	public SampleConsumerApplication(Map<String, Object> propMap) {
+	public SampleConsumerApplication0(Map<String, Object> propMap) {
 		this.consumer = new KafkaConsumer<String, String>(propMap);
 	}
 
@@ -60,7 +60,7 @@ public class SampleConsumerApplication {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		SampleConsumerApplication consumerApp = new SampleConsumerApplication(propMap());
+		SampleConsumerApplication0 consumerApp = new SampleConsumerApplication0(propMap());
 		consumerApp.pullMessage();
 		consumerApp.close();
 	}

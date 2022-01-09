@@ -12,7 +12,7 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.common.serialization.StringSerializer;
 
-public class SampleProducerApplication {
+public class SampleProducerApplication0 {
 
 	private static final String TOPIC_NAME = "my-topic-002";
 
@@ -24,7 +24,7 @@ public class SampleProducerApplication {
 
 	private Callback callback;
 
-	public SampleProducerApplication(Map<String, Object> propMap) {
+	public SampleProducerApplication0(Map<String, Object> propMap) {
 		this.producer = new KafkaProducer<String, String>(propMap);
 		callback = (recordMetadata, exception) -> {
 			if (null != exception) {
@@ -68,7 +68,7 @@ public class SampleProducerApplication {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		SampleProducerApplication producerApp = new SampleProducerApplication(propMap());
+		SampleProducerApplication0 producerApp = new SampleProducerApplication0(propMap());
 //		producerApp.pushMessageSync("1.0", "Welcome to world of Apache Kafka!!");
 //		producerApp.pushMessageSync("2.0", "Learning Apache Kafka is fun!!");
 //		producerApp.pushMessageSync("1.0", "Welcome to first producer program!!");
