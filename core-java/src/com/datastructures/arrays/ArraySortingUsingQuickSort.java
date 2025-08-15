@@ -20,23 +20,43 @@ public class ArraySortingUsingQuickSort {
 			sort(input, pivotIndex + 1, high);
 		}
 	}
+//
+//	public static int partition(int[] input, int low, int high) {
+//		int pivot = input[high];
+//		int pivotIndex = low - 1;
+//		int temp = 0;
+//		for (int i = low; i < high; i++) {
+//			if (pivot > input[i]) {
+//				pivotIndex++;
+//				temp = input[i];
+//				input[i] = input[pivotIndex];
+//				input[pivotIndex] = temp;
+//			}
+//		}
+//		pivotIndex++;
+//		temp = input[high];
+//		input[high] = input[pivotIndex];
+//		input[pivotIndex] = temp;
+//		return pivotIndex;
+//	}
+//	
 
-	public static int partition(int[] input, int low, int high) {
-		int pivot = input[high];
+	public static int partition(int[] nums, int low, int high) {
+		int pivot = nums[high];
 		int pivotIndex = low - 1;
 		int temp = 0;
 		for (int i = low; i < high; i++) {
-			if (pivot > input[i]) {
+			if (nums[i] > pivot) {
 				pivotIndex++;
-				temp = input[i];
-				input[i] = input[pivotIndex];
-				input[pivotIndex] = temp;
+				temp = nums[i];
+				nums[i] = nums[pivotIndex];
+				nums[pivotIndex] = temp;
 			}
 		}
 		pivotIndex++;
-		temp = input[high];
-		input[high] = input[pivotIndex];
-		input[pivotIndex] = temp;
+		temp = nums[high];
+		nums[high] = nums[pivotIndex];
+		nums[pivotIndex] = temp;
 		return pivotIndex;
 	}
 }

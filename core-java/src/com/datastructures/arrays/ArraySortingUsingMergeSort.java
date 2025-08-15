@@ -6,7 +6,7 @@ public class ArraySortingUsingMergeSort {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] input = { 6, 5, 3, 1, 8, 7, 2, 4 };
+		int[] input = { 3, 30, 34, 5, 9 };// { 6, 5, 3, 1, 8, 7, 2, 4 };
 		int[] output = sort(input);
 		System.out.println(Arrays.toString(output));
 	}
@@ -40,7 +40,7 @@ public class ArraySortingUsingMergeSort {
 		int j = 0;
 		int k = 0;
 		while (i < left.length && j < right.length) {
-			if (left[i] <= right[j]) {
+			if (left[i] < right[j]) {
 				output[k] = left[i];
 				i++;
 				k++;
