@@ -1,6 +1,6 @@
 package com.datastructures.arrays;
 
-public class MaximumSubarray {
+public class MaximumSubarraySum {
 
     private int solve(int[] arr, int n) {
         int sum = 0;

@@ -1,6 +1,6 @@
 package com.datastructures.arrays;
 
-public class MaximumProduct {
+public class MaximumSubarrayProduct {
 
     private int solve(int[] arr, int n) {
 
