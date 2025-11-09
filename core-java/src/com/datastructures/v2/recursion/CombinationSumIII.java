@@ -1,4 +1,4 @@
-package com.datastructures.recursion;
+package com.datastructures.v2.recursion;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,7 @@ public class CombinationSumIII {
             return;
         }
 
-        for (int i = num; i < 10; i++) {
+        for (int i = num; i <= 9; i++) {
 
             if (i > target) {
                 break;

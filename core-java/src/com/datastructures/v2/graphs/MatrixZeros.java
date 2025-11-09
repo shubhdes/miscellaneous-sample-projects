@@ -1,4 +1,4 @@
-package com.datastructures.arrays;
+package com.datastructures.v2.graphs;
 
 public class MatrixZeros {
 
@@ -9,10 +9,11 @@ public class MatrixZeros {
             for (int j = 0; j < m; j++) {
                 if (mat[i][j] == 0) {
                     mat[i][0] = 0;
-                    if (j == 0) {
-                        col0 = 0;
-                    } else {
+                    if (j != 0) {
                         mat[0][j] = 0;
+                    }
+                    else {
+                        col0 = 0;
                     }
                 }
             }
@@ -20,8 +21,10 @@ public class MatrixZeros {
 
         for (int i = 1; i < n; i++) {
             for (int j = 1; j < m; j++) {
-                if (mat[i][j] != 0 && (mat[i][0] == 0 || mat[0][j] == 0)) {
-                    mat[i][j] = 0;
+                if (mat[i][j] != 0) {
+                    if (mat[i][0] == 0 || mat[0][j] == 0) {
+                        mat[i][j] = 0;
+                    }
                 }
             }
         }

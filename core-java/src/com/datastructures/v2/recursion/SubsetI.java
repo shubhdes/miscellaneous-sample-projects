@@ -1,4 +1,4 @@
-package com.datastructures.recursion;
+package com.datastructures.v2.recursion;
 
 import java.util.ArrayList;
 import java.util.List;

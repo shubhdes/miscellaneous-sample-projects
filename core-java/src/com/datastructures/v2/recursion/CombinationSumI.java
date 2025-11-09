@@ -1,4 +1,4 @@
-package com.datastructures.recursion;
+package com.datastructures.v2.recursion;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,12 +15,12 @@ public class CombinationSumI {
             return;
         }
 
-        if (target >= nums[index]) {
+        if (nums[index] <= target) {
             tempresult.add(nums[index]);
             solve(nums, n, index, target - nums[index], tempresult, result);
+
             tempresult.remove(tempresult.size() - 1);
         }
-
         solve(nums, n, index + 1, target, tempresult, result);
     }
 }
